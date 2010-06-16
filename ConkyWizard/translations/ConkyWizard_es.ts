@@ -81,13 +81,13 @@ El uso de scripts, de una fuente no fiable, puede ser peligroso para su sistema.
     <name>DockConky</name>
     <message>
         <location filename="../src/DockConky.cpp" line="71"/>
-        <source>Kernell</source>
-        <translation>Kernell</translation>
+        <source>Kernel</source>
+        <translation>Kernel</translation>
     </message>
     <message>
         <location filename="../src/DockConky.cpp" line="71"/>
-        <source>Kernell:</source>
-        <translation>Kernell:</translation>
+        <source>Kernel:</source>
+        <translation>Kernel:</translation>
     </message>
     <message>
         <location filename="../src/DockConky.cpp" line="72"/>

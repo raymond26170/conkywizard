@@ -68,7 +68,7 @@ void DockConky::BasicWidgets()
 	// Widgets de sistema.
 	widgets.append(new WidgetSpace);
 	widgets.append(new WidgetSpace);
-	widgets.append(new WidgetNormal(tr("Kernell"), tr("Kernell:"), "${kernel}"));
+	widgets.append(new WidgetNormal(tr("Kernel"), tr("Kernel:"), "${kernel}"));
 	widgets.append(new WidgetNormal(tr("CPU"), tr("CPU:"), "${cpubar cpu1 10,75} ${cpu cpu1} %"));
 	widgets.append(new WidgetNormal(tr("RAM"), tr("RAM:"), "${membar 10,75} ${memperc} %"));
 	widgets.append(new WidgetNormal(tr("Swap"), tr("SWAP:"), "${swapbar 10,75}"));
