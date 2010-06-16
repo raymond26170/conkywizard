@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DialogNewEdit</class>
+ <widget class="QDialog" name="DialogNewEdit">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>645</width>
+    <height>430</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>New widget</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../resources/ConkyWizard.qrc">
+    <normaloff>:/graphics/Logo.png</normaloff>:/graphics/Logo.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* ________________________________________________________________________________________ */
+/* CAJAS. */
+
+QFrame#WidgetFrame {
+	border: 2px solid rgb(100, 47, 67);
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb(149, 107, 121), stop:1 rgb(91, 21, 69));
+	padding: 4px;
+}
+
+QFrame#WidgetFrameIn {
+	border: 2px solid rgb(232, 210, 218);
+	background-color: rgb(173, 95, 125);
+}
+
+/* ________________________________________________________________________________________ */
+/* BARRA DE DESPLAZAMIENTO. */
+
+QSlider::groove:horizontal#Ratio {
+	height: 16px;
+	border: 2px solid rgb(199, 145, 165);
+	background-color: rgb(173, 95, 125);
+	padding: -2px;
+}
+
+QSlider::handle:horizontal#Ratio {
+	image: url(:/graphics/IconSlider.png);
+	width: 32px;
+	padding-left: -2px;
+	padding-right: -2px;
+}
+
+/* ________________________________________________________________________________________ */
+/* ETIQUETAS. */
+
+QLabel#LabelTitle {
+	font-weight: bold;
+	color: rgb(234, 217, 224);
+}
+
+QLabel#LabelQuestion {
+	font-weight: bold;
+	font-size: 8pt;
+	margin-right: 4;
+	color: rgb(234, 217, 224);
+}
+
+QLabel#LabelResponse {
+	font-weight: bold;
+	font-size: 8pt;
+	margin-left: 4;
+	color: rgb(234, 217, 224);
+}
+
+/* ________________________________________________________________________________________ */
+/* CAJAS DE TEXTO. */
+
+QLineEdit#Question {
+	margin-right: 10;
+	border: 1px solid black;
+	background-color: white;
+	color: black;
+	selection-color: black;
+	selection-background-color: rgb(235, 117, 66);
+	padding: 2px;
+}
+
+QLineEdit::!enabled#Question {
+	border-color: rgb(173, 95, 125);
+	background-color: rgb(173, 95, 125);
+	color: rgb(173, 95, 125);
+}
+
+QLineEdit#Response {
+	margin-left: 10;
+	border: 1px solid black;
+	background-color: white;
+	color: black;
+	selection-color: black;
+	selection-background-color: rgb(235, 117, 66);
+	padding: 2px;
+}
+
+QLineEdit::!enabled#Response {
+	border-color: rgb(173, 95, 125);
+	background-color: rgb(173, 95, 125);
+	color: rgb(173, 95, 125);
+}
+
+/* ________________________________________________________________________________________ */
+/* ETIQUETA DEL AVISO. */
+
+QFrame#WarningFrame {
+	margin: 0px;
+	padding-left: -4px;
+	padding-top: -4px;
+	padding-right: 1px;
+	padding-bottom: 1px;
+	border-image: url(:/graphics/BackgroundWarning.png) 6px 6px 1px 9px repeat;
+	border-top: 6px transparent;
+	border-bottom: 9px transparent;
+	border-right: 1px transparent;
+	border-left: 6px transparent;
+}
+
+QLabel#WarningLabel {
+	margin: 0px;
+	border: 1px solid black;
+	padding: 3px;
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(255, 255, 255, 190));
+}
+
+</string>
+  </property>
+  <property name="locale">
+   <locale language="English" country="UnitedStates"/>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>false</bool>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_3">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Name</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="Name"/>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QFrame" name="WidgetFrame">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="LabelTitle">
+        <property name="text">
+         <string>Division between question and response</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="WidgetFrameIn">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="2" column="0" colspan="2">
+          <widget class="QSlider" name="Ratio">
+           <property name="cursor">
+            <cursorShape>SizeHorCursor</cursorShape>
+           </property>
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="singleStep">
+            <number>5</number>
+           </property>
+           <property name="value">
+            <number>50</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLineEdit" name="Question"/>
+         </item>
+         <item row="4" column="1">
+          <widget class="QLineEdit" name="Response"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="LabelQuestion">
+           <property name="text">
+            <string>Question 50%</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLabel" name="LabelResponse">
+           <property name="text">
+            <string>Response 50%</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="WarningFrame">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <widget class="QLabel" name="WarningLabel">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Warning: please do not use the command ${goto ##} or ${voffset ##}, to ensure proper operation of the program</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="IsScript">
+     <property name="title">
+      <string>Has a script</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>Name of the script</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="NameScript"/>
+        </item>
+        <item>
+         <widget class="QComboBox" name="TypeScript"/>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QTextEdit" name="Script">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="documentTitle">
+         <string notr="true"/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>Ratio</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../resources/ConkyWizard.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>DialogNewEdit</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>440</x>
+     <y>570</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>DialogNewEdit</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>440</x>
+     <y>570</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
