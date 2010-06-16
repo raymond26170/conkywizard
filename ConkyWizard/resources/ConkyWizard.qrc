@@ -1,0 +1,34 @@
+<RCC>
+    <qresource prefix="/">
+        <file>graphics/Logo.png</file>
+        <file>graphics/Banner.png</file>
+        <file>graphics/Watermark.png</file>
+        <file>graphics/IconYes.png</file>
+        <file>graphics/FlatScreenDown.png</file>
+        <file>graphics/FlatScreenLeft.png</file>
+        <file>graphics/FlatScreenRight.png</file>
+        <file>graphics/FlatScreenUp.png</file>
+        <file>graphics/LogoCircle.png</file>
+        <file>graphics/LogoUbuntu.png</file>
+        <file>graphics/SizePositionDown.png</file>
+        <file>graphics/SizePositionLeft.png</file>
+        <file>graphics/SizePositionRight.png</file>
+        <file>graphics/SizePositionUp.png</file>
+        <file>graphics/FilePaths.png</file>
+        <file>graphics/IconJump.png</file>
+        <file>graphics/IconNormal.png</file>
+        <file>graphics/IconSpace.png</file>
+        <file>graphics/IconTitle.png</file>
+        <file>graphics/IconUp.png</file>
+        <file>graphics/IconAdd.png</file>
+        <file>graphics/IconDown.png</file>
+        <file>graphics/IconDelete.png</file>
+        <file>graphics/IconEdit.png</file>
+        <file>graphics/IconSlider.png</file>
+        <file>graphics/IconPython.png</file>
+        <file>graphics/IconOther.png</file>
+        <file>graphics/BackgroundWarning.png</file>
+        <file>translations/ConkyWizard_es.qm</file>
+        <file>graphics/SizeSpace.png</file>
+    </qresource>
+</RCC>
